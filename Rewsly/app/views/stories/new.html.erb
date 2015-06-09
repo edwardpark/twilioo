@@ -1,0 +1,38 @@
+<h2>Enter a new Story</h2>
+
+    <%= form_for @stories,url:{ action: "create" } do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %></br>
+
+      <%= f.label :link %>
+      <%= f.url_field :link %></br>
+
+      <%= f.label :upvotes %>
+      <%= f.number_field :upvotes %></br> <!--possible issue with integration because returns string?-->
+
+      <%= f.label :category %>
+      <%= f.text_field :category %></br>
+
+      <%= f.submit "Create a New Story" %>
+    <% end  %>
+    
+
+<%= link_to "Back", stories_path %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
